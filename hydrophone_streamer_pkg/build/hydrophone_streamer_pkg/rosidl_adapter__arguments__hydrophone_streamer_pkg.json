@@ -1,0 +1,6 @@
+{
+  "package_name": "hydrophone_streamer_pkg",
+  "non_idl_tuples": [
+    "/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg:action/Hydrophoneraw.action"
+  ]
+}

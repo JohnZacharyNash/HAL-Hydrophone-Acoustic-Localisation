@@ -1,0 +1,11 @@
+source;share/hydrophone_processor_pkg/hook/cmake_prefix_path.ps1
+source;share/hydrophone_processor_pkg/hook/cmake_prefix_path.dsv
+source;share/hydrophone_processor_pkg/hook/cmake_prefix_path.sh
+source;share/hydrophone_processor_pkg/hook/pythonpath.ps1
+source;share/hydrophone_processor_pkg/hook/pythonpath.dsv
+source;share/hydrophone_processor_pkg/hook/pythonpath.sh
+source;share/hydrophone_processor_pkg/local_setup.bash
+source;share/hydrophone_processor_pkg/local_setup.dsv
+source;share/hydrophone_processor_pkg/local_setup.ps1
+source;share/hydrophone_processor_pkg/local_setup.sh
+source;share/hydrophone_processor_pkg/local_setup.zsh

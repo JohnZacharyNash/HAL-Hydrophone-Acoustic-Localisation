@@ -1,0 +1,2 @@
+Invoking command in '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg': /usr/bin/cmake /home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg -DCMAKE_INSTALL_PREFIX=/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/install/hydrophone_streamer_pkg
+Invoked command in '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg' returned '1': /usr/bin/cmake /home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg -DCMAKE_INSTALL_PREFIX=/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/install/hydrophone_streamer_pkg

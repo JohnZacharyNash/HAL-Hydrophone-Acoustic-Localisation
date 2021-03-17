@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from hydrophone_streamer_pkg/action/Hydrophoneraw.action
+// generated code does not contain a copyright notice
+
+
+module hydrophone_streamer_pkg {
+  module action {
+    @verbatim (language="comment", text=
+      " Request")
+    struct Hydrophoneraw_Goal {
+      int32 streamseconds;
+    };
+    struct Hydrophoneraw_Result {
+      @verbatim (language="comment", text=
+        " Result")
+      sequence<int32> rawdata;
+    };
+    struct Hydrophoneraw_Feedback {
+      @verbatim (language="comment", text=
+        " Feedback")
+      int32 rawsnapshot;
+    };
+  };
+};

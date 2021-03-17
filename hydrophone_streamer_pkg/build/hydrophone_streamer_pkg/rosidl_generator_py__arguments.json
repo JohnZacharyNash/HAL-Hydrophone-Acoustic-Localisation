@@ -1,0 +1,40 @@
+{
+  "package_name": "hydrophone_streamer_pkg",
+  "output_dir": "/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_generator_py/hydrophone_streamer_pkg",
+  "template_dir": "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_adapter/hydrophone_streamer_pkg:action/Hydrophoneraw.idl"
+  ],
+  "ros_interface_dependencies": [
+    "action_msgs:/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "builtin_interfaces:/home/jzn/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/jzn/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "unique_identifier_msgs:/home/jzn/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ],
+  "target_dependencies": [
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/__init__.py",
+    "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/home/jzn/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_adapter/hydrophone_streamer_pkg/action/Hydrophoneraw.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "/home/jzn/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ]
+}

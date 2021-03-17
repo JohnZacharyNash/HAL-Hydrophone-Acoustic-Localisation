@@ -1,0 +1,8 @@
+CMake Error at /home/jzn/ros2_foxy/ros2-linux/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file 'action/Hydrophone_raw.action'
+  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg'
+Call Stack (most recent call first):
+  CMakeLists.txt:35 (rosidl_generate_interfaces)
+
+

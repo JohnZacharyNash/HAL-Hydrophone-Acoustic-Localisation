@@ -1,0 +1,75 @@
+[0.000000] (-) TimerEvent: {}
+[0.000204] (hydrophone_streamer_pkg) JobQueued: {'identifier': 'hydrophone_streamer_pkg', 'dependencies': OrderedDict()}
+[0.000236] (hydrophone_streamer_pkg) JobStarted: {'identifier': 'hydrophone_streamer_pkg'}
+[0.007592] (hydrophone_streamer_pkg) JobProgress: {'identifier': 'hydrophone_streamer_pkg', 'progress': 'cmake'}
+[0.008718] (hydrophone_streamer_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg', '-DCMAKE_INSTALL_PREFIX=/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/install/hydrophone_streamer_pkg'], 'cwd': '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'jzn'), ('SSH_AGENT_PID', '1563'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jzn/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/jzn/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/jzn/ros2_foxy/ros2-linux/lib'), ('HOME', '/home/jzn'), ('OLDPWD', '/home/jzn/hal/HAL/HAL/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1387'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jzn/ros2_foxy/ros2-linux'), ('OPENSSL_ROOT_DIR', 'brew --prefix openssl'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jzn'), ('JOURNAL_STREAM', '8:35372'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/jzn/ros2_foxy/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/jzn/ros2_foxy/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jzn'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jzn/ros2_foxy/ros2-linux/bin:/home/jzn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jzn:@/tmp/.ICE-unix/1618,unix/jzn:/tmp/.ICE-unix/1618'), ('INVOCATION_ID', '859693fb83cc4dad8149d237b62bd90e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7f11df87_d0ce_4321_98c1_683cc404569f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jzn/ros2_foxy/ros2-linux'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jzn/ros2_foxy/ros2-linux')]), 'shell': False}
+[0.030974] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/home/jzn/ros2_foxy/ros2-linux/share/ament_cmake/cmake)\n'}
+[0.059254] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099818] (-) TimerEvent: {}
+[0.207676] (-) TimerEvent: {}
+[0.242210] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found rclpy: 1.0.4 (/home/jzn/ros2_foxy/ros2-linux/share/rclpy/cmake)\n'}
+[0.242605] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found std_msgs: 2.0.3 (/home/jzn/ros2_foxy/ros2-linux/share/std_msgs/cmake)\n'}
+[0.259554] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_connext_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.263363] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/home/jzn/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[0.278129] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Could not find RTI Connext - skipping rosidl_typesupport_connext_c\n'}
+[0.287593] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Could not find RTI Connext - skipping rosidl_typesupport_connext_cpp\n'}
+[0.309212] (-) TimerEvent: {}
+[0.350809] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.400007] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /home/jzn/ros2_foxy/ros2-linux/include  \n'}
+[0.409594] (-) TimerEvent: {}
+[0.510492] (-) TimerEvent: {}
+[0.554816] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_connext_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.611159] (-) TimerEvent: {}
+[0.658545] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/home/jzn/ros2_foxy/ros2-linux/share/ament_lint_auto/cmake)\n'}
+[0.719716] (-) TimerEvent: {}
+[0.802665] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.0 (/home/jzn/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[0.820343] (-) TimerEvent: {}
+[0.847015] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") \n'}
+[0.922458] (-) TimerEvent: {}
+[1.022976] (-) TimerEvent: {}
+[1.070526] (hydrophone_streamer_pkg) StderrLine: {'line': b'CMake Error at /home/jzn/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):\n'}
+[1.070781] (hydrophone_streamer_pkg) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[1.071201] (hydrophone_streamer_pkg) StderrLine: {'line': b'  hydrophone_streamer_pkg --arguments-file\n'}
+[1.071264] (hydrophone_streamer_pkg) StderrLine: {'line': b'  /home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_adapter__arguments__hydrophone_streamer_pkg.json\n'}
+[1.071316] (hydrophone_streamer_pkg) StderrLine: {'line': b'  --output-dir\n'}
+[1.071365] (hydrophone_streamer_pkg) StderrLine: {'line': b'  /home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_adapter/hydrophone_streamer_pkg\n'}
+[1.071422] (hydrophone_streamer_pkg) StderrLine: {'line': b'  --output-file\n'}
+[1.071470] (hydrophone_streamer_pkg) StderrLine: {'line': b'  /home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/rosidl_adapter/hydrophone_streamer_pkg.idls)\n'}
+[1.071517] (hydrophone_streamer_pkg) StderrLine: {'line': b'  returned error code 1:\n'}
+[1.071600] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.071657] (hydrophone_streamer_pkg) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[1.071711] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.071764] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main\n'}
+[1.071817] (hydrophone_streamer_pkg) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[1.071891] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 87, in _run_code\n'}
+[1.071962] (hydrophone_streamer_pkg) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[1.072039] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[1.072091] (hydrophone_streamer_pkg) StderrLine: {'line': b'      sys.exit(main())\n'}
+[1.072140] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[1.072188] (hydrophone_streamer_pkg) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[1.072236] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl\n'}
+[1.072284] (hydrophone_streamer_pkg) StderrLine: {'line': b'      return convert_action_to_idl(\n'}
+[1.072331] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl\n'}
+[1.072379] (hydrophone_streamer_pkg) StderrLine: {'line': b'      action = parse_action_string(package_name, input_file.stem, content)\n'}
+[1.072426] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 882, in parse_action_string\n'}
+[1.072473] (hydrophone_streamer_pkg) StderrLine: {'line': b'      goal_message = parse_message_string(\n'}
+[1.074821] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 537, in parse_message_string\n'}
+[1.075080] (hydrophone_streamer_pkg) StderrLine: {'line': b'      msg = MessageSpecification(pkg_name, msg_name, fields, constants)\n'}
+[1.075149] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__\n'}
+[1.075200] (hydrophone_streamer_pkg) StderrLine: {'line': b'      self.base_type = BaseType(\n'}
+[1.075256] (hydrophone_streamer_pkg) StderrLine: {'line': b'    File "/home/jzn/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__\n'}
+[1.075349] (hydrophone_streamer_pkg) StderrLine: {'line': b'      raise InvalidResourceName(\n'}
+[1.075403] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.075505] (hydrophone_streamer_pkg) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidResourceName: 'Hydrophone_raw_Goal' is an\n"}
+[1.075563] (hydrophone_streamer_pkg) StderrLine: {'line': b"  invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'\n"}
+[1.075611] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.075660] (hydrophone_streamer_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.075711] (hydrophone_streamer_pkg) StderrLine: {'line': b'  /home/jzn/ros2_foxy/ros2-linux/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[1.075763] (hydrophone_streamer_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (rosidl_generate_interfaces)\n'}
+[1.075810] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.075857] (hydrophone_streamer_pkg) StderrLine: {'line': b'\n'}
+[1.077356] (hydrophone_streamer_pkg) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.077503] (hydrophone_streamer_pkg) StdoutLine: {'line': b'See also "/home/jzn/hal/HAL/HAL/src/hydrophone_streamer_pkg/build/hydrophone_streamer_pkg/CMakeFiles/CMakeOutput.log".\n'}
+[1.084193] (hydrophone_streamer_pkg) CommandEnded: {'returncode': 1}
+[1.110042] (hydrophone_streamer_pkg) JobEnded: {'identifier': 'hydrophone_streamer_pkg', 'rc': 1}
+[1.112273] (-) EventReactorShutdown: {}
