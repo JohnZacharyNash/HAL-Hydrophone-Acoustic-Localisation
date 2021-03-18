@@ -21,19 +21,12 @@ import numpy as np
 import io
 import ast
 import peakdetect
-from io import StringIO
 from rclpy.action import ActionServer
 from rclpy.node import Node
-from hydrophone_streamer_pkg.action import Hydrophoneraw
 from hydrophone_localiser_pkg.action import Hydrophonelocalise
 from std_msgs.msg import String
 from std_msgs.msg import Int32MultiArray
 from std_msgs.msg import Float32
-
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
 
 class HydrophoneLocaliserAServer(Node):
     """
@@ -56,6 +49,9 @@ class HydrophoneLocaliserAServer(Node):
         self.samp_rate = 192000
         self.heading_publisher = self.create_publisher(String, 'target_heading', 10)
         self.distance_publisher = self.create_publisher(Float32, 'target_distance', 10)
+        self.channel_one_data = ""
+        self.channel_two_data = ""
+        self.channel_three_data = ""
         
         
 
@@ -68,42 +64,43 @@ class HydrophoneLocaliserAServer(Node):
             goal_handle ([ROS Goal]): [Allows for the functionality of goals, such as the ability to cancel them]
         """
         self.get_logger().info('Client request recieved...')
-        self.get_logger().info('Goal requested : ', goal_handle.message)
+        
+        
         hydrophone_one_peak = self.create_subscription(
             Int32MultiArray,
             'hydrophonepeakone',
-            self.listener_callback,
+            self.c1_listener_callback,
             10
         )
         hydrophone_two_peak = self.create_subscription(
             Int32MultiArray,
             'hydrophonepeaktwo',
-            self.listener_callback,
+            self.c2_listener_callback,
             10
         )
         hydrophone_three_peak = self.create_subscription(
             Int32MultiArray,
             'hydrophonepeakthree',
-            self.listener_callback,
+            self.c3_listener_callback,
             10
         )
         self.get_logger().info('Subscriptions created...')
 
-        if goal_handle.request == 'distance':
-            distance = self.get_distance(hydrophone_one_peak,hydrophone_two_peak,hydrophone_three_peak)
+        if goal_handle.request.request == 'distance':
+            distance = self.get_distance(self.channel_one_data,self.channel_two_data,self.channel_three_data)
             distmsg = Float32()
             distmsg.data = float(distance)
             self.distance_publisher.publish(distmsg)
 
-        elif goal_handle.request == 'heading':
-            heading, sample_difference = self.get_heading(hydrophone_one_peak,hydrophone_two_peak,hydrophone_three_peak)
+        elif goal_handle.request.request == 'heading':
+            heading, sample_difference = self.get_heading(self.channel_one_data,self.channel_two_data,self.channel_three_data)
             headmsg = String()
             headmsg.data = heading
             self.heading_publisher.publish(headmsg)
 
-        elif goal_handle.request == 'both':
-            distance = self.get_distance(hydrophone_one_peak,hydrophone_two_peak,hydrophone_three_peak)
-            heading, sample_difference = self.get_heading(hydrophone_one_peak,hydrophone_two_peak,hydrophone_three_peak)
+        elif goal_handle.request.request == 'both':
+            distance = self.get_distance(self.channel_one_data,self.channel_two_data,self.channel_three_data)
+            heading, sample_difference = self.get_heading(self.channel_one_data,self.channel_two_data,self.channel_three_data)
             distmsg = Float32()
             distmsg.data = float(distance)
             self.distance_publisher.publish(distmsg)
@@ -115,7 +112,7 @@ class HydrophoneLocaliserAServer(Node):
             self.get_logger().info('Error in goal request. Request distance or heading.')
 
         
-        result = Hydrophoneraw.Result()
+        result = Hydrophonelocalise.Result()
         return result
 
 
@@ -135,7 +132,8 @@ class HydrophoneLocaliserAServer(Node):
         time_from_target = sample_difference/self.samp_rate
         distance_from_target = time_from_target*1500 #1500msg the speed of sound through water
         self.get_logger().info('We are currently {0:.2f}m from the target'.format(distance_from_target))
-        distance = str("0:.2f".format(distance_from_target)) #TODO 
+        dist = round(distance_from_target, 2)
+        distance = str(dist) #TODO 
         return distance
 
 
@@ -263,14 +261,32 @@ class HydrophoneLocaliserAServer(Node):
 
 
 
-    def listener_callback(self, msg):
+    def c1_listener_callback(self, msg):
         """ROS Callback function for subscriptions. This is used to assign message data locally.
 
         Args:
             msg ([String]): [Hydrophonedataraw published from hydrophone_streamer_aserver.py is subscribed to here.]
 
         """
-        self.raw_data = msg.data
+        self.channel_one_data = msg.data
+    
+    def c2_listener_callback(self, msg):
+        """ROS Callback function for subscriptions. This is used to assign message data locally.
+
+        Args:
+            msg ([String]): [Hydrophonedataraw published from hydrophone_streamer_aserver.py is subscribed to here.]
+
+        """
+        self.channel_two_data = msg.data
+    
+    def c3_listener_callback(self, msg):
+        """ROS Callback function for subscriptions. This is used to assign message data locally.
+
+        Args:
+            msg ([String]): [Hydrophonedataraw published from hydrophone_streamer_aserver.py is subscribed to here.]
+
+        """
+        self.channel_three_data = msg.data
     
         
 

@@ -13,32 +13,32 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ===============================================================================
-"""A ROS Python Action client for processing revised data into peak detections from the action streamer server"""
+"""A ROS Python Action client requesting heading or distance processing from the server"""
 
-
+import sys
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
+from std_msgs.msg import String
 
 
-from hydrophone_streamer_pkg.action import Hydrophoneraw
+from hydrophone_localiser_pkg.action import Hydrophonelocalise
 
-class HydrophoneProcessorAClient(Node):
+
+class HydrophoneLocaliserAClient(Node):
 
     def __init__(self):
         """Constructor for client node
         """
-        super().__init__('Hydrophone_processor_aclient')
-        self._action_client = ActionClient(self,Hydrophoneraw,'hydrophoneprocessor')
+        super().__init__('Hydrophone_localiser_aclient')
+        self._action_client = ActionClient(self,Hydrophonelocalise,'hydrophonelocaliser')
+        self.designated_goal = String()
+        self.designated_goal.data = "both"
 
-    def send_goal(self, streamseconds):
-        """Send goal function for requesting functionality from action server
-
-        Args:
-            streamseconds (action): custom action ros file, streamseconds is the goal
-        """
-        goal_msg = Hydrophoneraw.Goal()
-        goal_msg.streamseconds = streamseconds
+    def send_goal(self, request):
+        
+        goal_msg = Hydrophonelocalise.Goal()
+        goal_msg.request = request
 
         self._action_client.wait_for_server()
         self._send_goal_future = self._action_client.send_goal_async(goal_msg,feedback_callback=self.feedback_callback)
@@ -66,7 +66,7 @@ class HydrophoneProcessorAClient(Node):
             future (goal): Stores result of the functionality of the action server
         """
         result = future.result().result
-        self.get_logger().info('Result: {0}'.format(result.rawdata))
+    
         rclpy.shutdown()
         
     
@@ -79,13 +79,17 @@ class HydrophoneProcessorAClient(Node):
         feedback = feedback_msg.feedback
         self.get_logger().info('Recieved feedback: {0}'.format(feedback.rawsnapshot))
 
+    def set_designated_goal(self,goal):
+
+        self.designated_goal = goal
+
 
 
 
 def main(args=None):
     rclpy.init(args=args)
-    action_client = HydrophoneProcessorAClient()
-    action_client.send_goal(10)
+    action_client = HydrophoneLocaliserAClient()
+    action_client.send_goal(action_client.designated_goal)
     rclpy.spin(action_client)
     
 
